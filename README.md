@@ -1,4 +1,4 @@
-# React-Native-Sample-
+# React-Native-Sample
 
 React Native sample app using Shopify's mobile buy sdk. 
 
