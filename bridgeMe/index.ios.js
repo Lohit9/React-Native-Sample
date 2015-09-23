@@ -1,48 +1,67 @@
 'use strict';
 
 var React = require('react-native');
-var Featured = require('./Products');
-var Search = require('./Search');
+var ProductList = require('./List');
+var ProductViewManager = require('NativeModules').ProductViewManager;
+var { requireNativeComponent } = React;
+var PRODUCT_ID ="";
 
 var {
+      StyleSheet,
+     NavigatorIOS,
     AppRegistry,
     TabBarIOS,
     Component
    } = React;
+
+   var styles = StyleSheet.create({
+    container: {
+        flex: 1
+    }
+});
 
 class bridgeMe extends Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            selectedTab: 'products'
+            barTintColor : 'green'
         };
     }
 
+    getInitialState() {
+    return {
+      navigationBarHidden: true
+    };
+  }
+
+  hideNavBar() {
+    this.setState({
+      navigationBarHidden: true
+    });
+  }
+
+  showNavBar() {
+    this.setState({
+      navigationBarHidden: false
+    });
+  }
+
     render() {
         return (
-            <TabBarIOS selectedTab={this.state.selectedTab}>
-                <TabBarIOS.Item
-                    selected={this.state.selectedTab === 'Products'}
-                    icon={{uri:'featured'}}
-                    onPress={() => {
-                        this.setState({
-                            selectedTab: 'Products'
-                        });
-                    }}>
-                    <Featured/>
-                </TabBarIOS.Item>
-                <TabBarIOS.Item
-                    selected={this.state.selectedTab === 'search'}
-                    icon={{uri:'search'}}
-                    onPress={() => {
-                        this.setState({
-                            selectedTab: 'search'
-                        });
-                    }}>
-                    <Search/>
-                </TabBarIOS.Item>
-            </TabBarIOS>
+            <NavigatorIOS
+                navigationBarHidden= {false}
+                style={styles.container}
+                initialRoute={{
+            
+            title: 'List of Products',
+            component: ProductList,
+             passProps: {
+            hideNavBar: this.hideNavBar,
+            showNavBar: this.showNavBar,
+          }
+            
+            }}/>
         );
     }
 }

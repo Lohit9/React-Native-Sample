@@ -23,12 +23,10 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
-		C123FB841BA0B57600038D0E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C123FB831BA0B57600038D0E /* ViewController.m */; settings = {ASSET_TAGS = (); }; };
-		C123FB921BA0B5F500038D0E /* PassKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C123FB911BA0B5F500038D0E /* PassKit.framework */; };
-		C123FB941BA0B5FB00038D0E /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C123FB931BA0B5FB00038D0E /* WebKit.framework */; };
-		C123FBAA1BA0B63900038D0E /* Buy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C123FBA91BA0B63900038D0E /* Buy.framework */; settings = {ASSET_TAGS = (); }; };
-		C123FBEB1BA0D9AA00038D0E /* Products.m in Sources */ = {isa = PBXBuildFile; fileRef = C123FBEA1BA0D9AA00038D0E /* Products.m */; settings = {ASSET_TAGS = (); }; };
-		C1243B4B1BA750A900C10804 /* ProductViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C1243B4A1BA750A900C10804 /* ProductViewManager.m */; settings = {ASSET_TAGS = (); }; };
+		C19FD60A1BB0CD9C0005ED7B /* PassKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C19FD6091BB0CD9C0005ED7B /* PassKit.framework */; };
+		C19FD60C1BB0CDAD0005ED7B /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C19FD60B1BB0CDAD0005ED7B /* WebKit.framework */; };
+		C19FD60F1BB0CDE80005ED7B /* ProductViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C19FD60E1BB0CDE80005ED7B /* ProductViewManager.m */; settings = {ASSET_TAGS = (); }; };
+		C19FD6B51BB1A4BD0005ED7B /* Buy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C19FD6B21BB1A4A10005ED7B /* Buy.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +107,34 @@
 			remoteGlobalIDString = 58B5119B1A9E6C1200147676;
 			remoteInfo = RCTText;
 		};
+		C19FD6AD1BB1A4A10005ED7B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C19FD6A51BB1A4A00005ED7B /* Mobile Buy SDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 90F7BA681B0D1DAF0067864D;
+			remoteInfo = Playground;
+		};
+		C19FD6AF1BB1A4A10005ED7B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C19FD6A51BB1A4A00005ED7B /* Mobile Buy SDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 90F592EC1B0D5EFE0026B382;
+			remoteInfo = "Mobile Buy SDK Tests";
+		};
+		C19FD6B11BB1A4A10005ED7B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C19FD6A51BB1A4A00005ED7B /* Mobile Buy SDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BE9A64281B503C2F0033E558;
+			remoteInfo = Buy;
+		};
+		C19FD6B31BB1A4B20005ED7B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C19FD6A51BB1A4A00005ED7B /* Mobile Buy SDK.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = BE9A64271B503C2F0033E558;
+			remoteInfo = Buy;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -124,24 +150,20 @@
 		139105B61AF99BAD00B5F7CC /* RCTSettings.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTSettings.xcodeproj; path = "../node_modules/react-native/Libraries/Settings/RCTSettings.xcodeproj"; sourceTree = "<group>"; };
 		139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTWebSocket.xcodeproj; path = "../node_modules/react-native/Libraries/WebSocket/RCTWebSocket.xcodeproj"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* bridgeMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bridgeMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = bridgeMe/AppDelegate.h; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = bridgeMe/AppDelegate.m; sourceTree = "<group>"; };
 		13B07FB21A68108700A75B9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = bridgeMe/Images.xcassets; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = bridgeMe/Info.plist; sourceTree = "<group>"; };
+		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = bridgeMe/main.m; sourceTree = "<group>"; };
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
-		C123FB821BA0B57600038D0E /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		C123FB831BA0B57600038D0E /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		C123FB911BA0B5F500038D0E /* PassKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PassKit.framework; path = System/Library/Frameworks/PassKit.framework; sourceTree = SDKROOT; };
-		C123FB931BA0B5FB00038D0E /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
-		C123FBA91BA0B63900038D0E /* Buy.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Buy.framework; sourceTree = "<group>"; };
-		C123FBE91BA0D9AA00038D0E /* Products.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Products.h; sourceTree = "<group>"; };
-		C123FBEA1BA0D9AA00038D0E /* Products.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Products.m; sourceTree = "<group>"; };
-		C1243B491BA750A900C10804 /* ProductViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductViewManager.h; sourceTree = "<group>"; };
-		C1243B4A1BA750A900C10804 /* ProductViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductViewManager.m; sourceTree = "<group>"; };
+		C19FD6091BB0CD9C0005ED7B /* PassKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PassKit.framework; path = System/Library/Frameworks/PassKit.framework; sourceTree = SDKROOT; };
+		C19FD60B1BB0CDAD0005ED7B /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		C19FD60D1BB0CDE80005ED7B /* ProductViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductViewManager.h; sourceTree = "<group>"; };
+		C19FD60E1BB0CDE80005ED7B /* ProductViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductViewManager.m; sourceTree = "<group>"; };
+		C19FD6A51BB1A4A00005ED7B /* Mobile Buy SDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Mobile Buy SDK.xcodeproj"; path = "../../../Mobile Buy SDK allv/mobile-buy-sdk-ios-private-develop/Mobile Buy SDK/Mobile Buy SDK.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,10 +178,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C123FB941BA0B5FB00038D0E /* WebKit.framework in Frameworks */,
-				C123FB921BA0B5F500038D0E /* PassKit.framework in Frameworks */,
+				C19FD6B51BB1A4BD0005ED7B /* Buy.framework in Frameworks */,
+				C19FD60C1BB0CDAD0005ED7B /* WebKit.framework in Frameworks */,
+				C19FD60A1BB0CD9C0005ED7B /* PassKit.framework in Frameworks */,
 				146834051AC3E58100842450 /* libReact.a in Frameworks */,
-				C123FBAA1BA0B63900038D0E /* Buy.framework in Frameworks */,
 				00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */,
 				00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */,
 				00C302E81ABCBA2D00DB3ED1 /* libRCTImage.a in Frameworks */,
@@ -251,21 +273,17 @@
 		13B07FAE1A68108700A75B9A /* bridgeMe */ = {
 			isa = PBXGroup;
 			children = (
+				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
-				C123FB821BA0B57600038D0E /* ViewController.h */,
-				C123FB831BA0B57600038D0E /* ViewController.m */,
-				C123FBE91BA0D9AA00038D0E /* Products.h */,
-				C123FBEA1BA0D9AA00038D0E /* Products.m */,
-				C1243B491BA750A900C10804 /* ProductViewManager.h */,
-				C1243B4A1BA750A900C10804 /* ProductViewManager.m */,
+				C19FD60D1BB0CDE80005ED7B /* ProductViewManager.h */,
+				C19FD60E1BB0CDE80005ED7B /* ProductViewManager.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
-				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FB71A68108700A75B9A /* main.m */,
 			);
-			path = bridgeMe;
+			name = bridgeMe;
 			sourceTree = "<group>";
 		};
 		146834001AC3E56700842450 /* Products */ = {
@@ -312,12 +330,12 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				C123FBA91BA0B63900038D0E /* Buy.framework */,
-				C123FB931BA0B5FB00038D0E /* WebKit.framework */,
-				C123FB911BA0B5F500038D0E /* PassKit.framework */,
+				C19FD6A51BB1A4A00005ED7B /* Mobile Buy SDK.xcodeproj */,
+				C19FD60B1BB0CDAD0005ED7B /* WebKit.framework */,
+				C19FD6091BB0CD9C0005ED7B /* PassKit.framework */,
 				13B07FAE1A68108700A75B9A /* bridgeMe */,
-				00E356EF1AD99517003FC87E /* bridgeMeTests */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
+				00E356EF1AD99517003FC87E /* bridgeMeTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 			);
 			indentWidth = 2;
@@ -329,6 +347,16 @@
 			children = (
 				13B07F961A680F5B00A75B9A /* bridgeMe.app */,
 				00E356EE1AD99517003FC87E /* bridgeMeTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C19FD6A61BB1A4A00005ED7B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C19FD6AE1BB1A4A10005ED7B /* Playground.app */,
+				C19FD6B01BB1A4A10005ED7B /* Mobile Buy SDK Tests.xctest */,
+				C19FD6B21BB1A4A10005ED7B /* Buy.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -365,6 +393,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				C19FD6B41BB1A4B20005ED7B /* PBXTargetDependency */,
 			);
 			name = bridgeMe;
 			productName = "Hello World";
@@ -398,6 +427,10 @@
 			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
 			projectDirPath = "";
 			projectReferences = (
+				{
+					ProductGroup = C19FD6A61BB1A4A00005ED7B /* Products */;
+					ProjectRef = C19FD6A51BB1A4A00005ED7B /* Mobile Buy SDK.xcodeproj */;
+				},
 				{
 					ProductGroup = 00C302A81ABCB8CE00DB3ED1 /* Products */;
 					ProjectRef = 00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */;
@@ -518,6 +551,27 @@
 			remoteRef = 832341B41AAA6A8300B99B32 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		C19FD6AE1BB1A4A10005ED7B /* Playground.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = Playground.app;
+			remoteRef = C19FD6AD1BB1A4A10005ED7B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C19FD6B01BB1A4A10005ED7B /* Mobile Buy SDK Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Mobile Buy SDK Tests.xctest";
+			remoteRef = C19FD6AF1BB1A4A10005ED7B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C19FD6B21BB1A4A10005ED7B /* Buy.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Buy.framework;
+			remoteRef = C19FD6B11BB1A4A10005ED7B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -553,10 +607,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C123FB841BA0B57600038D0E /* ViewController.m in Sources */,
-				C1243B4B1BA750A900C10804 /* ProductViewManager.m in Sources */,
-				C123FBEB1BA0D9AA00038D0E /* Products.m in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
+				C19FD60F1BB0CDE80005ED7B /* ProductViewManager.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -569,6 +621,11 @@
 			target = 13B07F861A680F5B00A75B9A /* bridgeMe */;
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
 		};
+		C19FD6B41BB1A4B20005ED7B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Buy;
+			targetProxy = C19FD6B31BB1A4B20005ED7B /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -578,6 +635,7 @@
 				13B07FB21A68108700A75B9A /* Base */,
 			);
 			name = LaunchScreen.xib;
+			path = bridgeMe;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -633,7 +691,7 @@
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../node_modules/react-native/React/**",
 				);
-				INFOPLIST_FILE = "$(SRCROOT)/bridgeMe/Info.plist";
+				INFOPLIST_FILE = bridgeMe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = bridgeMe;
@@ -653,7 +711,7 @@
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../node_modules/react-native/React/**",
 				);
-				INFOPLIST_FILE = "$(SRCROOT)/bridgeMe/Info.plist";
+				INFOPLIST_FILE = bridgeMe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = bridgeMe;

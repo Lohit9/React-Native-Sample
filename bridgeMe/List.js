@@ -1,17 +1,14 @@
 'use strict';
 
 var React = require('react-native');
-var ProductDetail = require('./ProductDetail');
-var text = '{ "products" : [' +
-'{ "title":"1Password T-shirt" , "images":"https://cdn.shopify.com/s/files/1/0653/5101/products/chest_black.png?v=1439225208" },' +
-'{ "title":"Test Product With No Image" , "images":"https://cdn.shopify.com/s/files/1/0653/5101/products/chest_black.png?v=1439225208" },' +
-'{ "title":"Smooth Taupe Calfskin Strap" , "images":"https://cdn.shopify.com/s/files/1/0653/5101/products/chest_black.png?v=1439225208" },' +
-'{ "title":"Scarf" , "images":"https://cdn.shopify.com/s/files/1/0653/5101/products/chest_black.png?v=1439225208" },' +
-'{ "title":"Automatic Adapter (2nd Generation)" , "images":"https://cdn.shopify.com/s/files/1/0653/5101/products/chest_black.png?v=1439225208"}]}';
+var ProductViewManager = require('NativeModules').ProductViewManager;
+var PRODUCT_ID ="";
+var REQUEST_URL = String(ProductViewManager.shopdomain);
 
-var ProductView =  require ('./ProductView');
+
 
 var {
+  Navigator,
     Image,
     StyleSheet,
     Text,
@@ -77,14 +74,15 @@ class List extends Component {
       }
 
       fetchData() {
-        var responseData = JSON.parse(text) ;
-
+          fetch(REQUEST_URL)
+          .then((response) => response.json())
+          .then((responseData) => {
               this.setState({
                   dataSource: this.state.dataSource.cloneWithRows(responseData.products),
                   isLoading: false
               });
-
-
+          })
+          .done();
       }
       render() {
            if (this.state.isLoading) {
@@ -114,14 +112,17 @@ class List extends Component {
 
 
     renderproducts(products) {
+          var imageURI = (typeof products.images[0] !== 'undefined') ? products.images[0].src : '';
          return (
-              <TouchableHighlight onPress={() => this.showproductsDetail(products)}  underlayColor='#dddddd'>
+              <TouchableHighlight onPress={() => ProductViewManager.presentProductwithId(String(products.id))}  underlayColor='#dddddd'>
                   <View>
                       <View style={styles.container}>
-
+                          <Image
+                              source={{uri: imageURI}}
+                              style={styles.thumbnail} />
                           <View style={styles.rightContainer}>
                               <Text style={styles.title}>{products.title}</Text>
-
+                              <Text style={styles.author}>{products.variants[0].price}</Text>
 
 
                               </View>
@@ -131,13 +132,7 @@ class List extends Component {
               </TouchableHighlight>
          );
      }
-     showproductsDetail(products){
-       this.props.navigator.push({
-         title:products.title,
-         component: ProductView,
-         passProps:{products}
-       });
-     }
+  
 }
 
 module.exports = List;
