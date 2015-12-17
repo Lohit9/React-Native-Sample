@@ -1,8 +1,7 @@
 # React-Native-Sample
 
-React Native sample app using Shopify's mobile buy sdk. 
+React Native sample app using Shopify's api
 
-**Directions**
+This repo is a dead repo: please refer to -> https://github.com/Lohit9/mobile-buy-sdk-react-native-sample
 
-* The bridgeMe file contains the app (status: working condition)
-* All the other files are sample app files and test files 
+Thank you
